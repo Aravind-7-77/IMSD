@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Factorial & Fibonacci Calculations</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #2980b9;
+}
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+  word-wrap: break-word;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Number Operations</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number" min="0" />
+    <div>
+      <button onclick="showFactorial()">Factorial</button>
+      <button onclick="showFibonacci()">Fibonacci</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function showFactorial() {
+      const num = parseInt(document.getElementById('numberInput').value);
+      if (isNaN(num) || num < 0) {
+        document.getElementById('result').innerHTML = 'Please enter a valid non-negative integer.';
+        return;
+      }
+      let fact = 1;
+      for (let i = 2; i <= num; i++) {
+        fact *= i;
+      }
+      document.getElementById('result').innerHTML = Factorial of (${num}) is: ${fact};
+    }
+
+    function showFibonacci() {
+      const num = parseInt(document.getElementById('numberInput').value);
+      if (isNaN(num) || num < 0) {
+        document.getElementById('result').innerHTML = 'Please enter a valid non-negative integer.';
+        return;
+      }
+      if (num === 0) {
+        document.getElementById('result').innerHTML = 'Fibonacci sequence: []';
+        return;
+      }
+      if (num === 1) {
+        document.getElementById('result').innerHTML = 'Fibonacci sequence: [0]';
+        return;
+      }
+      let fib = [0, 1];
+      for (let i = 2; i < num; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+      }
+      document.getElementById('result').innerHTML = Fibonacci sequence (${num} terms): [${fib.join(', ')}];
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript string object properties and methods</title>
+</head>
+<body>
+<h2>JavaScript String Object Example</h2>
+<p id="output"></p>
+
+<script>
+//Creating a string
+let text = "Hello JavaScript World!";
+
+//Using String Properties
+let length = text.length; //property
+
+//Using String Methods
+let upper=text.toUpperCase();    //convert to uppercase
+let lower=text.toLowerCase();    //convert to lowercase
+let trimmed=text.trim();    //remove spaces
+let sliced=text.slice(6,16);    //extract part of string
+let replaced=text.replace("World","Programmers");    //replace word
+let charAtPos=text.charAt(7);    //get character at position
+let index=text.indexOf("JavaScript");    //find index of word
+let splitted=text.trim().split(" ");    //split into array by spaces
+
+//Display the results
+document.getElementById("output").innerHTML=
+  "<b>Original String:</b>"+text+"<br>"+
+  "<b>Length:</b>"+length+"<br>"+
+  "<b>Uppercase:</b>"+upper+"<br>"+
+  "<b>Lowercase:</b>"+lower+"<br>"+
+  "<b>Trimmed:</b>"+trimmed+"<br>"+
+  "<b>Sliced(6,16):</b>"+sliced+"<br>"+
+  "<b>Replaced:</b>"+replaced+"<br>"+
+  "<b>Character at 7:</b>"+charAtPos+"<br>"+
+  "<b>Index of 'JavaScript':</b>"+index+"<br>"+
+  "<b>Splitted:</b>"+splitted.join(" ,");
+</script>
+</body>
+</html>

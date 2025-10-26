@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date Object Example</title>
+</head>
+<body>
+<h2>JavaScript Date Object Example</h2>
+<p id="dateInfo"></p>
+<script>
+//Create a new Date Object
+let currentDate = new Date();
+//Use Date Object methods
+let year = currentDate.getFullYear();
+let month=currentDate.getMonth()+1;
+let date=currentDate.getDate();
+let day=currentDate.getDay();
+let hours=currentDate.getHours();
+let minutes=currentDate.getMinutes();
+let seconds=currentDate.getSeconds();
+let time=currentDate.getTime();
+//Array for week days
+let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+//Display the values
+document.getElementById("dateInfo").innerHTML = 
+"Current Date: " + date + "/" + month + "/" + year + "<br>" + 
+"Day of the Week: " + days[day] + "<br>" +
+"Current Time: " + hours + ":" + minutes + ":" + seconds + "<br>" +
+"Milliseconds since Jan1,1970: " + time;
+</script>
+</body>
+</html>

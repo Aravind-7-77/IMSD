@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fibonacci Series using Function</title>
+</head>
+<body>
+  <h2>Fibonacci Series up to Given Number</h2>
+
+  <script>
+    // Function to display Fibonacci series up to n
+    function fibonacciSeries(n) {
+      let a = 0, b = 1, next;
+      document.write("Fibonacci Series up to " + n + " :<br>");
+      document.write(a + " " + b + " ");
+      
+      next = a + b;
+      while (next <= n) {
+
+        document.write(next + " ");
+        a = b;
+        b = next;
+        next = a + b;
+      }
+    }
+
+    // Taking input from user
+    let num = parseInt(prompt("Enter a number:"));
+    
+    // Calling the function
+    fibonacciSeries(num);
+  </script>
+</body>
+</html>

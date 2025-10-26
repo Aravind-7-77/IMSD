@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Eligibility</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            color: darkblue;
+        }
+    </style>
+    <script>
+        function getVoterInfo() {
+            // Ask for voter name
+            let name = prompt("Enter your name:");
+            // Ask for voter age
+            let age = prompt("Enter your age:");
+            age = Number(age); // Convert string to number
+            // Determine voting eligibility
+            let eligibility = age >= 18 ? "Eligible to Vote" : "Not Eligible to Vote";
+            // Create table HTML
+            let tableHTML = "<table>";
+            tableHTML += "<tr><th>Name</th><th>Age</th><th>Voting Eligibility</th></tr>";
+            tableHTML += `<tr><td>${name}</td><td>${age}</td><td>${eligibility}</td></tr>`;
+            tableHTML += "</table>";
+
+            // Display the table in the page
+            document.getElementById("voterTable").innerHTML = tableHTML;
+        }
+    </script>
+</head>
+<body>
+    <h2>Voter Eligibility Checker</h2>
+    <button onclick="getVoterInfo()">Enter Voter Information</button>
+
+    <!-- Placeholder for the table -->
+    <div id="voterTable"></div>
+</body>
+</html>

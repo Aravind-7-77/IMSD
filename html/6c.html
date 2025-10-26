@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Input Methods</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+	input,button{margin:10px 0;display:block;}
+    #output{ margin-top: 20px;font-weight:bold;}
+  </style>
+</head>
+<body>
+  <h1>Ways to take Input in JavaScript</h1
+<!--1.Text Input Field-->
+<label>Enter your name:</label>
+<Input type="text" id="nameinput">
+  <button onclick="getinputFromField()">Submit Name</button>
+ <!--2.Prompt-->
+  <button onclick="getinputFromField()">Enter Age(Prompt)</button>
+  <!--3.Form Input-->
+  <form onsubmit="getinputFromForm(event)">
+  <label>Enter your email:</label>
+  <input type="email"id=emailInput">
+  <button type="Submit">Submit Email</button>
+  </form>
+  <!--4.Dropdown Selection-->
+  <label>select your country:</label>
+  <selectid="countrySelect">
+  <option value="India">India</option>
+  <option value="USA">USA</option>
+  <option value="Japan">Japan</option>
+  </select>
+  <button onclick="getinputFromDropdown()">Submit Country</button>
+  <button onclick="updateDOM()">Update DOM</button>
+  <div id="output">your input will appear here...</div>
+<script
+// 1. Input from text field
+function getInputFromField() 
+{
+     const name = document.getElementById("namelnput").value;
+     document.getElementById("output").innerText = "Name: " + name;
+}
+// 2. Input from prompt box
+function getInputFromPrompt() 
+{
+      const age = prompt("Please enter your age:");
+      document.getElementById("output").innerText = "Age: " + age;
+}
+// 3. Input from for
+function getInputFromForm (event) 
+{
+     event.preventDefault(); // Prevent page reload
+     const email = document.getElementById("emailInput").value;
+     document.getElementById("output").innerText = "Email: " + email;
+}
+//4.
+function getinputFromDropdown() 
+{
+      const country = document.getElementById("");
+      document.getElementById("output").innerText = "Age: " + age;
+}
+ </script>
+</body>
+</html>
+

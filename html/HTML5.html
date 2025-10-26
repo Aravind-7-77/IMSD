@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>HTML5 Semantic Elements Demo</title>
+<style>
+ body
+ {
+  front-family:Arial, sans-serif;
+  margin:0;
+ }
+
+header,nav,footer
+  {
+   background-color:#333;
+   color:white;
+   padding:1em;
+   }
+nav a 
+  {
+  color:white;
+  margin:0 10px;
+ text-decoration: none;
+ }
+ main {
+  display:flex;
+  padding:20px;
+  }
+article{
+  flex: 3;
+  padding: 20px;
+  background-color:#f9f9f9;
+  } 
+ aside {
+   flex:1;
+   padding: 20px;
+   background-color: #e0e0e0;
+}
+
+ figure{
+   margin:0;
+   text-align: center;
+}
+
+ figcaption{
+   font-style:italic;
+   font-size:0.9em;
+ }
+ footer{
+    text-align:center;
+  }
+
+ </style>
+</head>
+<body>
+<header>
+<h1>My Blog Website</h1>
+</header>
+
+<nav>
+ <a href="home.html">Home</a>
+ <a href="">Articles</a>
+ <a href="#">Gallery</a>
+ <a href="#">Contact</a>
+</nav>
+
+ <main>
+  <article>
+    <h2>Understanding HTML5 Semantic Tags</h2>
+    <p><span style ="font weight: bold;">HTML5</span> introduced semantic elements that make your code more readable and accessible.</p>
+   <figure>
+     <img src="C:\my photos\12.jpg" height="110" width="140" alt="HTML5 Illustration">
+
+  <figcaption>figure:Illustration of HTML5 layout</figcaption>
+ </figure>
+<section>
+<h3>Why use Semantic Tags?</h3>
+<p>Semantic Tags help search engines and screen readers understand the structure of your webpage.</p>
+</section>
+</article>
+    
+ <aside>
+   <h3>Related Posts</h3>
+   <ul>
+     <li><a href="#">Introuduction to HTML<a/a></li>
+     <li><a href="#">CSS Basics<a/a></li>
+     <li><a href="#">JavaScript for Beginners<a/a></li>
+   </ul>
+  </aside>
+  </main>
+
+<footer>
+ <p>&copy; 2025 My Blog. All rights reserved.</p>
+ </footer>
+</body>
+</html>

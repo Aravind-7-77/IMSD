@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTP-8">
+<meta name="viewport" contenet="width=device-width,initial-scale=1.0">
+<title>CSS Combinator Selectors</title>
+<style>
+/Descendent Selector (div p)/
+div p{
+color:blue;
+}
+/Child Selector(div > p)/
+div > p{
+background-color: yellow;
+}
+/Adjacent sibling Selector (h2 + p)/
+h2 + p {
+color:pink;
+font-weight: bold;
+}
+/* General Sibling Selector (h2 ~ p)*/
+h2 ~ p {
+font-style: italic;
+}
+/* Styling for visibility */
+div,selection {
+border: 1px solid #ccc;
+padding: 10px;
+margin: 10px;
+}
+</style>
+</head>
+<body>
+<h1>CSS Combinator Selectors Example</h1>
+<div>
+<p>Child of div affected by both descendent & chils selectors)
+</p>
+<section>
+<p>Descendent of div(only affected by descendent selector)</p>
+</section>
+</div>
+<h2>Heading (h2)</h2>
+<p>Adjacent sibiling(immediately after h2,styled pink& bold)</p>
+<p>General sibiling (comes after h2,styled italic)</p>
+<p>Another general sibling (also italic)</p>
+</body>
+</html>

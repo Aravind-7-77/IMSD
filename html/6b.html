@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Output Methods</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #outputArea { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Output Methods</h1>
+  <button onclick="showAlert()">Show Alert</button>
+  <button onclick="logToConsole()">Log to Console</button>
+  <button onclick="writeToDocument()">Write to Document</button>
+  <button onclick="updateDOM()">Update DOM</button>
+  <div id="outputArea">Output will appear here...</div>
+  <script>
+    // 1. Alert box0
+    function showAlert() {
+      alert("This is an alert box!");
+    }
+    // 2. Console log
+    function logToConsole() {
+      console.log("This message is logged to the console.");
+    }
+    // 3. Document write
+    function writeToDocument() {
+      document.write("This text is written directly to the document.");
+    }
+    // 4. DOM manipulation
+    function updateDOM() {
+      document.getElementById("outputArea").innerText = "This text was inserted using DOM manipulation.";
+    }
+  </script>
+</body>
+</html>

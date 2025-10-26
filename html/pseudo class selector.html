@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Pseudo-Class Selectors Example</title>
+  <style>
+    /* 1️⃣ Link States */
+    a:link {
+      color: blue;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    a:hover {
+      color: red;
+      text-decoration: underline;
+font_weight:bold;
+    }
+
+    a:active {
+      color: orange;
+    }
+
+    /* 2️⃣ Structural Pseudo-classes */
+    ul li:first-child {
+      font-weight: bold;
+      color: green;
+    }
+
+    ul li:last-child {
+      color: brown;
+    }
+
+    /* 3️⃣ Hover on Button */
+    button:hover {
+      background-color: lightblue;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Pseudo-Class Example</h1>
+
+  <a href="file:///C:/Users/yami/OneDrive%20-%20Aditya%20Educational%20Institutions/Desktop/html/9c.html" target="_blank">Visit Example Website</a>
+
+  <ul>
+    <li>This is the first paragraph (first-child).</ll>
+    <li>This is a middle paragraph.</ll>
+    <li>This is the last paragraph (last-child).</ll>
+  </ul>
+
+  <button>Hover over me!</button>
+</body>
+</html>
